@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+#head{
+    position:relative;
+    z-index:4;
+    color:white;
+}
+canvas{
+    width:100%;
+    height:100vh;
+    background-color: rgb(24,24,24);
+    position:absolute;
+    top:0;
+    left:0;
+}
+.container{
+    position:absolute;
+    top:40vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+    mix-blend-mode: exclusion;
+}
+h1{
+    color:white;
+    font-size:4em;
+    font-family: 'Poppins', sans-serif;
+    transition:1s;
+    animation: out linear 0.5s infinite;
+}
+/* @keyframes out {
+    to{
+        font-size:2em;
+    }
+} */
+h1:hover{
+    font-size:2em;
+}
+.music-wrapper{
+    position:relative;
+    top:74vh;
+    left:24vw;
+    z-index: 3;
+    box-shadow:0 20px 20px 0 rgba(0,51,102);
+    height:20vh;
+    width:50%;
+}
+.music-wrapper h4{
+    color:white;
+    /* display:flex;
+    justify-content: center; */
+    padding-left:2vw;
+    background-color: midnightblue;
+     opacity:0;  
+    transform: translateY(100%);
+    transition: 1s;
+    /* background-color: rgb(41, 41, 116); */
+}
+.navigation {
+    position:absolute;
+    top:80%;
+    left:15.5%;
+    display:flex;
+    justify-content: center;
+}
+.action-btn{
+    background:rgb(24,24,24);
+    border:0;
+    transition: 1s;
+    padding-right:2vw;
+    margin: 0 4vw;
+}
+.action-btn:hover{
+    transform: translateX(-2px) translateY(-2px);
+}
+.action-btn:active{
+    transform: translateX(-1px) translateY(-1px);
+}
+.fas{
+    color:white;
+    font-size:1.5em;
+}
+.song-info{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* opacity:0; 
+    transform: translateY(100%);
+    transition: 1s; */
+}
+.info-wrapper{
+    background-color: midnightblue;
+    /* opacity:0; 
+    transform: translateY(100%);
+    transition: 1s; */
+}
+.progress-container{
+    margin: 2vh 2vw 0 2vw;
+    width: calc(100% - 4vw);
+    height:0.5vh;
+    background-color: rgb(41, 41, 116);
+    opacity:0;  
+    transform: translateY(100%);
+    transition: 1s;
+    cursor: pointer;
+}
+.play img{
+    border-radius:10%;
+    animation: size 0.25s linear infinite;
+}
+@keyframes size{
+     to{
+        width: 55px;
+    } 
+}
+.progress-info{
+    background:pink;
+    height:0.5vh;
+    width:0%;
+    opacity:0;
+    border-radius:5px;
+    transition: width 0.1s linear;
+}
+.music-wrapper.play .info-wrapper{
+    transform: translateY(0%);
+    opacity:1;
+}
+.play h4,.progress-container,.progress-info{
+    opacity:1;
+}
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size:3em;
+    }
+    .container{
+        position:absolute;
+        top:45vh;
+        left:3vw;
+    }
+    .navigation{
+        position:absolute;
+        left:3%;
+    }
+  }
