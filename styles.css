@@ -145,6 +145,10 @@ h1:hover{
     }
     .navigation{
         position:absolute;
-        left:3%;
+        left:10%;
+    }
+    .music-wrapper{
+        width:65%;
+        left:20vw;
     }
   }
