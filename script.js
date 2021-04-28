@@ -108,7 +108,7 @@ const infoWrapper = document.querySelector('.info-wrapper');
 const musicWrapper = document.querySelector('.music-wrapper');
 
 //Title Array
-const songs = ['Fast Car', 'Summer', 'New Rules', 'Snow Child'];
+const songs = ['Fast Car', 'Summer', 'New Rules', 'Snow Child', 'On and On'];
 let songIndex = 0;
 
 loadsong(songs[songIndex]);
